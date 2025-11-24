@@ -1,0 +1,5 @@
+{
+  "name": "The AI Money Machine",
+  "description": "A fintech dashboard visualizing the flow of capital in the AI ecosystem using D3.js and Gemini analysis.",
+  "requestFramePermissions": []
+}
