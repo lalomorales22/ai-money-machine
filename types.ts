@@ -2,6 +2,11 @@ import * as d3 from 'd3';
 
 export type ModelProvider = 'GEMINI' | 'OPENAI' | 'ANTHROPIC' | 'XAI';
 
+export interface AnalysisResult {
+    text: string;
+    sources?: { title: string; uri: string }[];
+}
+
 export interface Node extends d3.SimulationNodeDatum {
   id: string;
   group: 'Central' | 'Satellite' | 'Outer';
@@ -10,9 +15,11 @@ export interface Node extends d3.SimulationNodeDatum {
   desc?: string;
   val: number; // For radius
   sentimentScore: number; // 0-100, 50 is neutral
-  // Explicitly add simulation properties to satisfy TypeScript
+  // Explicitly add simulation properties to satisfy TypeScript and persistence logic
   x?: number;
   y?: number;
+  vx?: number;
+  vy?: number;
   fx?: number | null;
   fy?: number | null;
 }

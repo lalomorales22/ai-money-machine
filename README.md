@@ -16,24 +16,51 @@ A high-performance fintech dashboard that visualizes the "Capital Rotation" with
 - **Simulated Database**: Persistent storage of signals and news using LocalStorage (mimicking a SQLite DB).
 - **Live News Simulation**: Algorithmic news generation that impacts sentiment scores in real-time.
 
-## Setup
+## How to Run
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/lalomorales22/ai-money-machine.git
+   cd ai-money-machine
    ```
 
-2. **Environment Variables**:
-   Create a `.env` file in the root directory (or configure via your deployment platform):
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment**:
+   Create a `.env` file in the root directory. You must add your API keys to enable the "Deep Analyze" features.
    ```env
-   API_KEY=your_gemini_key_here
-   OPENAI_API_KEY=your_openai_key_here
-   ANTHROPIC_API_KEY=your_claude_key_here
-   XAI_API_KEY=your_grok_key_here
+   # Required for Gemini 2.5 Analysis (Default)
+   API_KEY=your_gemini_api_key
+
+   # Optional: For multi-model support
+   OPENAI_API_KEY=your_openai_key
+   ANTHROPIC_API_KEY=your_anthropic_key
+   XAI_API_KEY=your_xai_key
    ```
 
-3. **Run**:
-   Open `index.html` in a modern browser or serve via a static file server.
+4. **Start the Development Server**:
+   ```bash
+   npm start
+   # or
+   npm run dev
+   ```
+   Open your browser to [http://localhost:3000](http://localhost:3000) (or the URL provided in the terminal) to launch the dashboard.
+
+### Building for Production
+
+To create a production-ready build:
+```bash
+npm run build
+```
 
 ## Architecture
 
