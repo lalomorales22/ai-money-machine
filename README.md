@@ -1,4 +1,5 @@
 # The AI Money Machine
+<img width="2051" height="1245" alt="Screenshot 2025-11-24 at 2 32 42 PM" src="https://github.com/user-attachments/assets/0cf2ff0e-b681-4a0a-b9d8-075047225be5" />
 
 **Github:** [lalomorales22/ai-money-machine](https://github.com/lalomorales22/ai-money-machine)
 
